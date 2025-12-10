@@ -19,6 +19,7 @@ public class Loops {
         }
         return strListNums;
     }
+
     public static String reverseListNums(int x){
         String strReverseListNums = "";
         for (int i = x; i >= 0 ; i--) {
@@ -26,6 +27,7 @@ public class Loops {
         }
         return strReverseListNums;
     }
+
     public static String chet(int x) {
         String strChet = "";
         for (int i = 0; i <= x; i += 2) {
@@ -33,6 +35,7 @@ public class Loops {
         }
         return strChet;
     }
+
     public static int pow(int x, int y) {
         int finPow = 1;
         for (int i = 1; i <= y; i++) {
@@ -40,6 +43,7 @@ public class Loops {
         }
         return finPow;
     }
+
     public static int numLen(long x) {
         int i;
         for (i = 0; x != 0; i++) {
@@ -47,6 +51,7 @@ public class Loops {
         }
         return i;
     }
+
     public static boolean equalNum(int x) {
         boolean boolEqualNum = true;
         while (boolEqualNum && x > 9) {
@@ -55,6 +60,7 @@ public class Loops {
         }
         return boolEqualNum;
     }
+
     public static void square(int x) {
         for (int i = 0; i < x; i++) {
             for (int j = 0; j < x; j++) {
@@ -63,6 +69,7 @@ public class Loops {
             System.out.println();
         }
     }
+
     public static void leftTriangle(int x){
         String strLeftTriangle = "*";
         for (int i = 0; i < x; i++) {
@@ -70,6 +77,7 @@ public class Loops {
             strLeftTriangle += "*";
         }
     }
+
     public static void rightTriangle(int x) {
         String strRightTriangle = "*";
         for (int i = 0; i < x; i++) {
@@ -80,6 +88,7 @@ public class Loops {
             strRightTriangle += "*";
         }
     }
+
     public static void guessGame() {
         int randomNum = 3;
         int x;
