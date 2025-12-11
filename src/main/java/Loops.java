@@ -13,10 +13,11 @@ public class Loops {
         leftTriangle(4);
         rightTriangle(5);
         guessGame();*/
+        Scanner scanner = new Scanner(System.in);
         int count = 0;
         while (true) {
             System.out.println("Введите путь к файлу");
-            String path = new Scanner(System.in).nextLine();
+            String path = scanner.nextLine();
             File file = new File(path);
             boolean fileExists = file.exists();
             boolean isDirectory = file.isDirectory();
@@ -24,11 +25,9 @@ public class Loops {
                 System.out.println("Файл не существует или указанный путь является путём к папке");
                 continue;
             }
-            if (fileExists && !isDirectory){
-                System.out.println("Путь указан верно");
-                count+=1;
-                System.out.println("Это файл номер "+count);
-            }
+            System.out.println("Путь указан верно");
+            count++;
+            System.out.println("Это файл номер "+count);
         }
     }
 
@@ -112,8 +111,8 @@ public class Loops {
     public static void guessGame() {
         int randomNum = 3;
         int x;
+        Scanner sc = new Scanner(System.in);
         do {
-            java.util.Scanner sc = new java.util.Scanner(System.in);
             System.out.println("What number am I thinking (0 to 9)? :");
             x = sc.nextInt();
             if (x != randomNum) {
