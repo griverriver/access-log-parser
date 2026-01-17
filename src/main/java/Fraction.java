@@ -1,4 +1,4 @@
-public class Fraction {
+public class Fraction extends Number{
     private final int numerator;
     private final int denominator;
 
@@ -38,4 +38,23 @@ public class Fraction {
         return new Fraction(minusNum, this.denominator);
     }
 
+    @Override
+    public int intValue() {
+        return numerator/denominator;
+    }
+
+    @Override
+    public long longValue() {
+        return numerator/denominator;
+    }
+
+    @Override
+    public float floatValue() {
+        return (float) numerator /denominator;
+    }
+
+    @Override
+    public double doubleValue() {
+        return (double) numerator /denominator;
+    }
 }
