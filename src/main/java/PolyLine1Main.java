@@ -9,7 +9,7 @@ public class PolyLine1Main {
         ClosedPolyLine polyLine2 = new ClosedPolyLine(point1, point2, point3, point4, point5);
         System.out.println(polyLine1);
         System.out.println(polyLine2);
-        System.out.println(polyLine1.length());
-        System.out.println(polyLine2.length());
+        System.out.println(polyLine1.getLength());
+        System.out.println(polyLine2.getLength());
     }
 }

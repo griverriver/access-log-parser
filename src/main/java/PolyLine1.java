@@ -1,12 +1,12 @@
 import java.util.Arrays;
 
-class PolyLine1 {
+class PolyLine1 extends Line implements Measurable{
     Point1[] points;
 
     public PolyLine1(Point1... points){
         this.points = points;
     }
-    public double length(){
+    public double getLength(){
         double sum = 0, len1, len2;
         for (int i = 0; i < points.length -1; i++) {
             len1 = points[i].x - points[i+1].x;

@@ -1,7 +1,7 @@
-import java.util.ArrayList;
+/*import java.util.ArrayList;
 
 public class PolyLine {
-    static ArrayList<LineConstr> linesList = new ArrayList<>();
+    static ArrayList<Line> linesList = new ArrayList<>();
 
     public static void main(String[] args) {
         ArrayList<PointConstr> pointsList = new ArrayList<>();
@@ -24,9 +24,9 @@ public class PolyLine {
         }
         System.out.println("Длина Ломаной = " + sum);
 
-        LineConstr a = new LineConstr(a1, a2);
-        LineConstr b = new LineConstr(a2, a3);
-        LineConstr c = new LineConstr(a3, a4);
+        Line a = new Line(a1, a2);
+        Line b = new Line(a2, a3);
+        Line c = new Line(a3, a4);
         getLines(a);
         getLines(b);
         getLines(c);
@@ -49,7 +49,7 @@ public class PolyLine {
         return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
     }
 
-    public static void getLines(LineConstr line) {
+    public static void getLines(Line line) {
         linesList.add(line);
     }
-}
+}*/
