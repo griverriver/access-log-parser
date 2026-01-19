@@ -1,6 +1,7 @@
 package ru.courses.main;
 
 import ru.courses.math.geometry.Point1;
+import ru.courses.math.geometry.Line;
 
 public class LineMain {
     public static void main(String[] args) {

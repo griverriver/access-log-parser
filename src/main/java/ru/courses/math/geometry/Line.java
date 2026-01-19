@@ -1,18 +1,18 @@
 package ru.courses.math.geometry;
 
-class Line implements ru.courses.Measurable{
-    Point1 a1;
-    Point1 a2;
+public class Line implements ru.courses.Measurable{
+    public Point1 a1;
+    public Point1 a2;
     Point1[] points;
 
 
-    Line(int x1, int y1, int x2, int y2) {
+    public Line(int x1, int y1, int x2, int y2) {
         this.a1 = new Point1(x1,y1);
         this.a2 = new Point1(x2,y2);
         new Line(a1, a2);
     }
 
-    Line(Point1... points){
+    public Line(Point1... points){
         this.points = points;
     }
 

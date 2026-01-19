@@ -1,7 +1,8 @@
 package ru.courses.math.geometry;
 
 public class Point1 {
-    int x, y;
+    public int x;
+    public int y;
 
     public Point1(int x, int y) {
         this.x = x;
@@ -17,14 +18,3 @@ public class Point1 {
     }
 }
 
-public class Point3D extends Point1 {
-    int z;
-    public Point3D(int x, int y, int z) {
-        super(x, y);
-        this.z=z;
-
-    }
-    public String toString() {
-        return "{" + x + ";" + y + ";" + z + '}';
-    }
-}
