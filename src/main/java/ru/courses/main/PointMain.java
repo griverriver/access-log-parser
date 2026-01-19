@@ -1,4 +1,8 @@
-public class Point {
+package ru.courses.main;
+
+import ru.courses.math.geometry.PointConstr;
+
+public class PointMain {
     public static void main(String[] args) {
         PointConstr a1 = new PointConstr(1, 3);
         PointConstr a2 = new PointConstr(1, 3);

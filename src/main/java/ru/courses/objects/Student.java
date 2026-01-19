@@ -1,10 +1,12 @@
+package ru.courses.objects;
+
 import java.util.*;
 
 public class Student {
     private final String name;
     private final ArrayList<Integer> grades;
 
-    Student(String name, ArrayList<Integer> grades) {
+    public Student(String name, ArrayList<Integer> grades) {
         this.name = name;
         this.grades = new ArrayList<>();
         if (grades != null) {
@@ -15,7 +17,7 @@ public class Student {
         }
     }
 
-    Student(String name) {
+    public Student(String name) {
         this(name, new ArrayList<>());
     }
 

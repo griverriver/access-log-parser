@@ -1,3 +1,5 @@
+package ru.courses.basics;
+
 import java.util.Arrays;
 
 public class Array {

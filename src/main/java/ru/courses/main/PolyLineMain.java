@@ -1,6 +1,8 @@
+package ru.courses.main;
+
 /*import java.util.ArrayList;
 
-public class PolyLine {
+public class PolyLineMain {
     static ArrayList<Line> linesList = new ArrayList<>();
 
     public static void main(String[] args) {

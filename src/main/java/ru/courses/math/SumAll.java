@@ -1,3 +1,7 @@
+package ru.courses.math;
+
+import ru.courses.objects.Fraction;
+
 import java.util.*;
 
 public class SumAll {

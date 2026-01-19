@@ -1,4 +1,6 @@
-class Point1 {
+package ru.courses.math.geometry;
+
+public class Point1 {
     int x, y;
 
     public Point1(int x, int y) {
@@ -6,7 +8,7 @@ class Point1 {
         this.y = y;
     }
 
-    void coordinates() {
+    public void coordinates() {
         System.out.println(this);
     }
 
@@ -15,7 +17,7 @@ class Point1 {
     }
 }
 
-class Point3D extends Point1 {
+public class Point3D extends Point1 {
     int z;
     public Point3D(int x, int y, int z) {
         super(x, y);

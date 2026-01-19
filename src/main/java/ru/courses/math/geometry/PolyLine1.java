@@ -1,6 +1,10 @@
+package ru.courses.math.geometry;
+
+import ru.courses.Measurable;
+
 import java.util.Arrays;
 
-class PolyLine1 extends Line implements Measurable{
+public class PolyLine1 extends Line implements Measurable {
     Point1[] points;
 
     public PolyLine1(Point1... points){

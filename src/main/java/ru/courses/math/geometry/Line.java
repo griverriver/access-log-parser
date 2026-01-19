@@ -1,4 +1,6 @@
-class Line implements Measurable{
+package ru.courses.math.geometry;
+
+class Line implements ru.courses.Measurable{
     Point1 a1;
     Point1 a2;
     Point1[] points;

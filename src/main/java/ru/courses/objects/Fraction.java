@@ -1,8 +1,10 @@
+package ru.courses.objects;
+
 public class Fraction extends Number{
     private final int numerator;
     private final int denominator;
 
-    Fraction(int numerator, int denominator) {
+    public Fraction(int numerator, int denominator) {
         this.numerator = numerator;
         if (denominator > 0) {
             this.denominator = denominator;

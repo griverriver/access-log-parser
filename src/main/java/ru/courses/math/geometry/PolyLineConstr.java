@@ -1,3 +1,5 @@
+package ru.courses.math.geometry;
+
 import java.util.ArrayList;
 
 class PolyLineConstr {

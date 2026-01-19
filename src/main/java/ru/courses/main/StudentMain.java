@@ -1,3 +1,7 @@
+package ru.courses.main;
+
+import ru.courses.objects.Student;
+
 import java.util.*;
 
 public class StudentMain {

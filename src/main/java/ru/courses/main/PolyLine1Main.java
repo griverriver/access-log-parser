@@ -1,3 +1,9 @@
+package ru.courses.main;
+
+import ru.courses.math.geometry.ClosedPolyLine;
+import ru.courses.math.geometry.Point1;
+import ru.courses.math.geometry.PolyLine1;
+
 public class PolyLine1Main {
     public static void main(String[] args) {
         Point1 point1 = new Point1(2, 6);

@@ -1,3 +1,5 @@
+package ru.courses.basics;
+
 public class ClassesMethods {
     public static void main(String[] args) {
         System.out.printf("%.3f%n", fraction(6.37279));

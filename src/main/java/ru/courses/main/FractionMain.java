@@ -1,3 +1,7 @@
+package ru.courses.main;
+
+import ru.courses.objects.Fraction;
+
 public class FractionMain {
     public static void main(String[] args) {
         Fraction f1 = new Fraction(1, 3);

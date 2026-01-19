@@ -1,3 +1,7 @@
+package ru.courses.main;
+
+import ru.courses.math.geometry.Point1;
+
 public class LineMain {
     public static void main(String[] args) {
         Point1 point1 = new Point1(1, 3);
