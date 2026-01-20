@@ -1,30 +1,30 @@
 package ru.courses.math.geometry;
 
-public class Line implements ru.courses.Measurable{
-    private Point1 a1;
-    private Point1 a2;
+import java.util.Objects;
+
+public class Line implements ru.courses.Measurable, Cloneable{
+    private Point1 start;
+    private Point1 end;
     private Point1[] points;
 
-    public Point1 getA1() {
-        return a1;
+    public Point1 getStart() {
+        return start;
     }
 
-    public Point1 getA2() {
-        return a2;
+    public Point1 getEnd() {
+        return end;
     }
 
-    public void setA1(Point1 a1) {
-        this.a1 = a1;
-    }
-
-    public void setA2(Point1 a2) {
-        this.a2 = a2;
-    }
 
     public Line(int x1, int y1, int x2, int y2) {
-        this.a1 = new Point1(x1,y1);
-        this.a2 = new Point1(x2,y2);
-        new Line(a1, a2);
+        this.start = new Point1(x1,y1);
+        this.end = new Point1(x2,y2);
+        new Line(start, end);
+    }
+
+    public Line(Point1 start, Point1 end) {
+        this.start = start;
+        this.end = end;
     }
 
     public Line(Point1... points){
@@ -32,7 +32,7 @@ public class Line implements ru.courses.Measurable{
     }
 
     public String toString() {
-        return "Линия от " + a1 + " до " + a2;
+        return "Линия от " + start + " до " + end;
     }
 
     public double getLength(){
@@ -43,5 +43,25 @@ public class Line implements ru.courses.Measurable{
             sum += Math.sqrt(len1*len1+len2*len2);
         }
         return sum;
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Line line = (Line) o;
+        return Objects.equals(start.getX(), line.start.getX()) &&
+                Objects.equals(start.getY(), line.start.getY()) &&
+                Objects.equals(end.getX(), line.end.getX()) &&
+                Objects.equals(end.getY(), line.end.getY());
+    }
+
+    @Override
+    public Line clone() {
+        try {
+            return new Line(start.clone(),end.clone());
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
