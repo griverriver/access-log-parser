@@ -50,10 +50,7 @@ public class Line implements ru.courses.Measurable, Cloneable{
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         Line line = (Line) o;
-        return Objects.equals(start.getX(), line.start.getX()) &&
-                Objects.equals(start.getY(), line.start.getY()) &&
-                Objects.equals(end.getX(), line.end.getX()) &&
-                Objects.equals(end.getY(), line.end.getY());
+        return start.equals(line.start) && end.equals(line.end);
     }
 
     @Override
