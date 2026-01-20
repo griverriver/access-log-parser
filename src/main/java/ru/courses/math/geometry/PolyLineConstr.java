@@ -3,8 +3,15 @@ package ru.courses.math.geometry;
 import java.util.ArrayList;
 
 class PolyLineConstr {
-    ArrayList<PointConstr> pointsList;
+    private ArrayList<PointConstr> pointsList;
 
+    public ArrayList<PointConstr> getPointsList() {
+        return pointsList;
+    }
+
+    public void setPointsList(ArrayList<PointConstr> pointsList) {
+        this.pointsList = pointsList;
+    }
 
     PolyLineConstr() {
         this.pointsList = new ArrayList<>();

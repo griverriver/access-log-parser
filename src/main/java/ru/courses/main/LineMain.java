@@ -11,14 +11,14 @@ public class LineMain {
         Line b = new Line(10, 11, 15, 19);
         Line c = new Line(point2, point1);
         System.out.println(c);
-        a.a2.x += 2;
-        a.a2.y += 3;
-        b.a1.x += 4;
-        b.a1.y += 5;
+        a.getA2().setX(a.getA2().getX() + 2);
+        a.getA2().setY(a.getA2().getY() + 3);
+        b.getA1().setX(b.getA1().getX() + 4);
+        b.getA1().setY(b.getA1().getY() + 5);
         System.out.println("Линия 3 после изменения: " + c);
-        double sum = getLength(a.a1.x, a.a1.y, a.a2.x, a.a2.y)
-                + getLength(b.a1.x, b.a1.y, b.a2.x, b.a2.y)
-                + getLength(c.a1.x, c.a1.y, c.a2.x, c.a2.y);
+        double sum = getLength(a.getA1().getX(), a.getA1().getY(), a.getA2().getX(), a.getA2().getY())
+                + getLength(b.getA1().getX(), b.getA1().getY(), b.getA2().getX(), b.getA2().getY())
+                + getLength(c.getA1().getX(), c.getA1().getY(), c.getA2().getX(), c.getA2().getY());
         System.out.println("Суммарная длина всех трех линий = " + sum);
     }
 
