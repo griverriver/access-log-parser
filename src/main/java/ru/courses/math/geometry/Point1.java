@@ -1,8 +1,9 @@
 package ru.courses.math.geometry;
 
 
+import java.util.Objects;
 
-public class Point1 {
+public class Point1 implements Cloneable{
     private int x;
     private int y;
 
@@ -35,6 +36,26 @@ public class Point1 {
 
     public String toString() {
         return "{" + x + ";" + y + '}';
+    }
+
+    @Override
+    public boolean equals(Object o){
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        Point1 point1 = (Point1) o;
+        return Objects.equals(x,point1.x) && Objects.equals(y,point1.y);
+    }
+
+    @Override
+    public Point1 clone() {
+        try {
+            Point1 p = new Point1(x,y);
+            p.x = x;
+            p.y = y;
+            return p;
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
     }
 }
 
