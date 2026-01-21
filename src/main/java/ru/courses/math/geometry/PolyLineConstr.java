@@ -2,7 +2,8 @@ package ru.courses.math.geometry;
 
 import java.util.ArrayList;
 
-class PolyLineConstr {
+public class PolyLineConstr {
+    private static ArrayList<Line> linesList = new ArrayList<>();
     private ArrayList<PointConstr> pointsList;
 
     public ArrayList<PointConstr> getPointsList() {
@@ -13,11 +14,15 @@ class PolyLineConstr {
         this.pointsList = pointsList;
     }
 
-    PolyLineConstr() {
+    public static ArrayList<Line> getLinesList() {
+        return linesList;
+    }
+
+    public PolyLineConstr() {
         this.pointsList = new ArrayList<>();
     }
 
-    PolyLineConstr(ArrayList<PointConstr> pointsList) {
+    public PolyLineConstr(ArrayList<PointConstr> pointsList) {
         this.pointsList = new ArrayList<>();
         this.pointsList.addAll(pointsList);
     }
@@ -25,5 +30,13 @@ class PolyLineConstr {
 
     public String toString() {
         return "Линия " + this.pointsList;
+    }
+
+    public static double getLength(int x1, int y1, int x2, int y2) {
+        return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+    }
+
+    public static void getLines(Line line) {
+        linesList.add(line);
     }
 }

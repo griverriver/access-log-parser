@@ -45,6 +45,11 @@ public class Line implements ru.courses.Measurable, Cloneable{
         return sum;
     }
 
+    //Line
+    /*public static double getLength(int x1, int y1, int x2, int y2) {
+        return Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2));
+    }*/
+
     @Override
     public boolean equals(Object o){
         if (this == o) return true;
