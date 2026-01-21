@@ -4,36 +4,7 @@ import java.io.File;
 import java.util.Scanner;
 
 public class Loops {
-    public static void main(String[] args) {
-        /*System.out.println(listNums(8));
-        System.out.println(reverseListNums(5));
-        System.out.println(chet(8));
-        System.out.println(pow(2, 5));
-        System.out.println(numLen(53942));
-        System.out.println(equalNum(5555));
-        square(4);
-        leftTriangle(4);
-        rightTriangle(5);
-        guessGame();*/
-        Scanner scanner = new Scanner(System.in);
-        int count = 0;
-        while (true) {
-            System.out.println("Введите путь к файлу");
-            String path = scanner.nextLine();
-            File file = new File(path);
-            boolean fileExists = file.exists();
-            boolean isDirectory = file.isDirectory();
-            if (!fileExists || isDirectory) {
-                System.out.println("Файл не существует или указанный путь является путём к папке");
-                continue;
-            }
-            System.out.println("Путь указан верно");
-            count++;
-            System.out.println("Это файл номер "+count);
-        }
-    }
-
-    /*public static String listNums(int x){
+    public static String listNums(int x){
         String strListNums = "";
         for (int i = 0; i <= x; i++) {
             strListNums += i + " ";
@@ -122,6 +93,6 @@ public class Loops {
             }
         } while (x != randomNum);
         System.out.println("Yes, it`s " + randomNum);
-    }*/
+    }
 
 }

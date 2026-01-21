@@ -3,47 +3,6 @@ package ru.courses.basics;
 import java.util.Arrays;
 
 public class Array {
-    public static void main(String[] args) {
-        int [] arr = {4,2,7,5,7,1,5};
-        System.out.println(findFirst(arr,5));
-
-        int[] arr2 = {4, 7, 5, 2, 1, 5, 3};
-        System.out.println(findLast(arr2, 5));
-
-        int[] arr3 = {4,6,2,-7};
-        System.out.println(maxAbs(arr3));
-
-        int[] arr4 = {4, 1, 2, -7, 8};
-        System.out.println(countPositive(arr4));
-
-        int[] arr5 = {6, 4, 7, 2, 7, 4, 6};
-        System.out.println(palindrom(arr5));
-
-        int[] arr6 = {4,6,8,3};
-        reverse(arr6);
-
-        int[] arr7 = {4,7,2,6};
-        System.out.println(Arrays.toString(reverseBack(arr7)));
-
-        int[] arr8 = {1, 2, 3};
-        int[] arr8_1 = {7, 8, 9};
-        System.out.println(Arrays.toString(concat(arr8, arr8_1)));
-
-        int[] arr9 = {1, 2, 3, 2, 6, 7, 2};
-        System.out.println(Arrays.toString(findAll(arr9, 2)));
-
-        int[] arr10 = {1, 2, -3, -2, 6, 7, -2};
-        System.out.println(Arrays.toString(deleteNegative(arr10)));
-
-        int[] arr11 = {1, 2, 3, 4, 5, 6, 7};
-        System.out.println(Arrays.toString(add(arr11, 99, 3)));
-
-        int[] arr12 = {1, 2, 3, 4, 5, 6, 7};
-        int[] arr12_1 = {98, 99, 100};
-        System.out.println(Arrays.toString(addMas(arr12, arr12_1, 3)));
-    }
-
-
     public static int findFirst(int[] arr, int x){
         for (int i = 0; i < arr.length; i++) {
             if (arr[i] == x) return i;

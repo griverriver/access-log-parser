@@ -1,22 +1,6 @@
 package ru.courses.basics;
 
 public class ConditionalStatements {
-    public static void main(String[] args) {
-        System.out.println(abs(8));
-        System.out.println(safeDiv(12, 0));
-        System.out.println(max(4, 8));
-        System.out.println(makeDecision(9, 9));
-        System.out.println(max3(4, 7, 9));
-        System.out.println(sum3(2, 5, 7));
-        System.out.println(sum2(5, 5));
-        System.out.println(is35(5));
-        System.out.println(magic6(1, 6));
-        System.out.println(age(24));
-        System.out.println(day(5));
-        printDays("среда");
-    }
-
-
     public static int abs(int x) {
         if (x < 0) return -x;
         return x;

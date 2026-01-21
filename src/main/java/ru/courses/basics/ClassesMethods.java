@@ -1,26 +1,6 @@
 package ru.courses.basics;
 
 public class ClassesMethods {
-    public static void main(String[] args) {
-        System.out.printf("%.3f%n", fraction(6.37279));
-        System.out.println(sumLastNums(723648223));
-        System.out.println(charToNum('0'));
-        System.out.println(isPositive(-43));
-        System.out.println(is2Digits(47));
-        System.out.println(isUpperCase('R'));
-        System.out.println(isInRange(6, 1, 4));
-        System.out.println(isDivisor(4, 7));
-        System.out.println(isEqual(3, 3, 3));
-
-
-        int numSum = lastNumSum(5, 11);
-        numSum = lastNumSum(numSum, 123);
-        numSum = lastNumSum(numSum, 14);
-        numSum = lastNumSum(numSum, 1);
-        System.out.println(numSum);
-
-    }
-
     public static double fraction(double x) {
         return x - (int) x;
     }

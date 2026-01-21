@@ -1,15 +1,22 @@
 package ru.courses.main;
 
 import ru.courses.Measurable;
+import ru.courses.basics.ClassesMethods;
+import ru.courses.basics.ConditionalStatements;
+import ru.courses.basics.Loops;
+import ru.courses.math.SumAll;
 import ru.courses.math.geometry.*;
 import ru.courses.objects.Fraction;
 import ru.courses.objects.Sauce;
 import ru.courses.objects.Spiciness;
 import ru.courses.objects.Student;
 import ru.courses.basics.Array;
+import ru.courses.math.Exponentiation;
 
 import java.awt.*;
+import java.io.File;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 import java.util.Scanner;
 
@@ -95,11 +102,11 @@ public class Main {
         Measurable polyLine2 = new PolyLine1(pointPolyLine1, pointPolyLine2, pointPolyLine3, pointPolyLine4, pointPolyLine6);
         System.out.println(polyLine1.equals(polyLine2));
 
-        /*Measurable polyLine3 = new ClosedPolyLine(pointPolyLine1, pointPolyLine2, pointPolyLine3, pointPolyLine4, pointPolyLine5);
+        Measurable polyLine3 = new ClosedPolyLine(pointPolyLine1, pointPolyLine2, pointPolyLine3, pointPolyLine4, pointPolyLine5);
         System.out.println(polyLine1);
         System.out.println(polyLine3);
         System.out.println(polyLine1.getLength());
-        System.out.println(polyLine3.getLength());*/
+        System.out.println(polyLine3.getLength());
 
         //______________________________________________________________________________________________________
         //PolyLine
@@ -181,6 +188,131 @@ public class Main {
         }
         System.out.println(sumsum);
 
+        //______________________________________________________________________________________________________
+        //Exponentiation
+        String x = "5";
+        String y = "2";
+        Exponentiation.exponentiation(x,y);
+        System.out.println(Exponentiation.exponentiation(x,y));
 
+        //______________________________________________________________________________________________________
+        //SumAll
+        int i1 = 2;
+        Fraction fra1 = new Fraction(3, 5);
+        double d1 = 2.3;
+        double d2 = 3.6;
+        Fraction fra2 = new Fraction(49, 12);
+        int i2 = 3;
+        Fraction fra3 = new Fraction(3, 2);
+        Fraction fra4 = new Fraction(1, 3);
+        int i3 = 1;
+        ArrayList<Number> numSet1 = new ArrayList<>(Arrays.asList(i1, fra1, d1));
+        ArrayList<Number> numSet2 = new ArrayList<>(Arrays.asList(d2, fra2, i2, fra3));
+        ArrayList<Number> numSet3 = new ArrayList<>(Arrays.asList(fra4, i3));
+        System.out.println(SumAll.SumAll(numSet1));
+        System.out.println(SumAll.SumAll(numSet2));
+        System.out.println(SumAll.SumAll(numSet3));
+
+        //______________________________________________________________________________________________________
+        //Array
+        int [] arr = {4,2,7,5,7,1,5};
+        System.out.println(Array.findFirst(arr,5));
+
+        int[] arr2 = {4, 7, 5, 2, 1, 5, 3};
+        System.out.println(Array.findLast(arr2, 5));
+
+        int[] arr3 = {4,6,2,-7};
+        System.out.println(Array.maxAbs(arr3));
+
+        int[] arr4 = {4, 1, 2, -7, 8};
+        System.out.println(Array.countPositive(arr4));
+
+        int[] arr5 = {6, 4, 7, 2, 7, 4, 6};
+        System.out.println(Array.palindrom(arr5));
+
+        int[] arr6 = {4,6,8,3};
+        Array.reverse(arr6);
+
+        int[] arr7 = {4,7,2,6};
+        System.out.println(Arrays.toString(Array.reverseBack(arr7)));
+
+        int[] arr8 = {1, 2, 3};
+        int[] arr8_1 = {7, 8, 9};
+        System.out.println(Arrays.toString(Array.concat(arr8, arr8_1)));
+
+        int[] arr9 = {1, 2, 3, 2, 6, 7, 2};
+        System.out.println(Arrays.toString(Array.findAll(arr9, 2)));
+
+        int[] arr10 = {1, 2, -3, -2, 6, 7, -2};
+        System.out.println(Arrays.toString(Array.deleteNegative(arr10)));
+
+        int[] arr11 = {1, 2, 3, 4, 5, 6, 7};
+        System.out.println(Arrays.toString(Array.add(arr11, 99, 3)));
+
+        int[] arr12 = {1, 2, 3, 4, 5, 6, 7};
+        int[] arr12_1 = {98, 99, 100};
+        System.out.println(Arrays.toString(Array.addMas(arr12, arr12_1, 3)));
+
+        //______________________________________________________________________________________________________
+        //ClassesMethods
+        System.out.printf("%.3f%n", ClassesMethods.fraction(6.37279));
+        System.out.println(ClassesMethods.sumLastNums(723648223));
+        System.out.println(ClassesMethods.charToNum('0'));
+        System.out.println(ClassesMethods.isPositive(-43));
+        System.out.println(ClassesMethods.is2Digits(47));
+        System.out.println(ClassesMethods.isUpperCase('R'));
+        System.out.println(ClassesMethods.isInRange(6, 1, 4));
+        System.out.println(ClassesMethods.isDivisor(4, 7));
+        System.out.println(ClassesMethods.isEqual(3, 3, 3));
+
+        int numSum = ClassesMethods.lastNumSum(5, 11);
+        numSum = ClassesMethods.lastNumSum(numSum, 123);
+        numSum = ClassesMethods.lastNumSum(numSum, 14);
+        numSum = ClassesMethods.lastNumSum(numSum, 1);
+        System.out.println(numSum);
+
+        //______________________________________________________________________________________________________
+        //ConditionalStatements
+        System.out.println(ConditionalStatements.abs(8));
+        System.out.println(ConditionalStatements.safeDiv(12, 0));
+        System.out.println(ConditionalStatements.max(4, 8));
+        System.out.println(ConditionalStatements.makeDecision(9, 9));
+        System.out.println(ConditionalStatements.max3(4, 7, 9));
+        System.out.println(ConditionalStatements.sum3(2, 5, 7));
+        System.out.println(ConditionalStatements.sum2(5, 5));
+        System.out.println(ConditionalStatements.is35(5));
+        System.out.println(ConditionalStatements.magic6(1, 6));
+        System.out.println(ConditionalStatements.age(24));
+        System.out.println(ConditionalStatements.day(5));
+        ConditionalStatements.printDays("среда");
+
+        //______________________________________________________________________________________________________
+        //Loops
+        System.out.println(Loops.listNums(8));
+        System.out.println(Loops.reverseListNums(5));
+        System.out.println(Loops.chet(8));
+        System.out.println(Loops.pow(2, 5));
+        System.out.println(Loops.numLen(53942));
+        System.out.println(Loops.equalNum(5555));
+        Loops.square(4);
+        Loops.leftTriangle(4);
+        Loops.rightTriangle(5);
+        Loops.guessGame();
+        Scanner scanner = new Scanner(System.in);
+        int count = 0;
+        while (true) {
+            System.out.println("Введите путь к файлу");
+            String path = scanner.nextLine();
+            File file = new File(path);
+            boolean fileExists = file.exists();
+            boolean isDirectory = file.isDirectory();
+            if (!fileExists || isDirectory) {
+                System.out.println("Файл не существует или указанный путь является путём к папке");
+                continue;
+            }
+            System.out.println("Путь указан верно");
+            count++;
+            System.out.println("Это файл номер "+count);
+        }
     }
 }
