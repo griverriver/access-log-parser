@@ -17,10 +17,10 @@ public class PolyLine1Main {
         Measurable polyLine2 = new PolyLine1(point1, point2, point3, point4, point6);
         System.out.println(polyLine1.equals(polyLine2));
 
-        Measurable polyLine3 = new ClosedPolyLine(point1, point2, point3, point4, point5);
+        /*Measurable polyLine3 = new ClosedPolyLine(point1, point2, point3, point4, point5);
         System.out.println(polyLine1);
         System.out.println(polyLine3);
         System.out.println(polyLine1.getLength());
-        System.out.println(polyLine3.getLength());
+        System.out.println(polyLine3.getLength());*/
     }
 }
