@@ -59,6 +59,11 @@ public class Line implements ru.courses.Measurable, Cloneable{
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(this.start,this.end);
+    }
+
+    @Override
     public Line clone() {
         try {
             return new Line(start.clone(),end.clone());

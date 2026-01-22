@@ -47,6 +47,11 @@ public class Point1 implements Cloneable{
     }
 
     @Override
+    public int hashCode() {
+        return Objects.hash(this.x,this.y);
+    }
+
+    @Override
     public Point1 clone() {
         try {
             Point1 p = new Point1(x,y);
