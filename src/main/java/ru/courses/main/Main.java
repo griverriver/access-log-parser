@@ -22,8 +22,17 @@ import static ru.courses.math.geometry.PolyLineConstr.getLines;
 
 public class Main {
     public static void main(String[] args) {
+        //Square
+        Square square1 = new Square(3,7,4);
+        //Square square2 = new Square(3,7,-4);
+        System.out.println(square1);
+        square1.setSideLength(9);
+        square1.setLeftUpPoint(new Point1(6,22));
+        System.out.println(square1);
+
+        //______________________________________________________________________________________________________
         //City
-        City cityA = new City("A");
+        /*City cityA = new City("A");
         City cityB = new City("B");
         City cityC = new City("C");
         City cityD = new City("D");
@@ -43,11 +52,9 @@ public class Main {
 
         System.out.println(cityB.travelBy(1));
         System.out.println(cityB.travelBy(2));
-        System.out.println(cityB.travelBy(3));
+        System.out.println(cityB.travelBy(3));*/
 
-
-
-
+        //______________________________________________________________________________________________________
         //Point1
         /*Point1 point1 = new Point1(3, 7);
         java.awt.Point point2 = new Point(8, 9);
