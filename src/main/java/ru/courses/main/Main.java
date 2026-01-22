@@ -6,6 +6,10 @@ import ru.courses.basics.ConditionalStatements;
 import ru.courses.basics.Loops;
 import ru.courses.math.SumAll;
 import ru.courses.math.geometry.*;
+import ru.courses.math.geometry.figures.Circle;
+import ru.courses.math.geometry.figures.Figure;
+import ru.courses.math.geometry.figures.Rectangle;
+import ru.courses.math.geometry.figures.Square;
 import ru.courses.objects.*;
 import ru.courses.basics.Array;
 import ru.courses.math.Exponentiation;
@@ -24,8 +28,17 @@ import static ru.courses.math.geometry.PolyLineConstr.getLines;
 public class Main {
     public static void main(String[] args) {
         //______________________________________________________________________________________________________
+        //Figures
+        Square square = new Square(4,7,5);
+        Rectangle rectangle = new Rectangle(2,5,9,2);
+        Circle circle = new Circle(9,1,6);
+        System.out.println(square.getArea());
+        System.out.println(rectangle.getArea());
+        System.out.println(circle.getArea());
+
+        //______________________________________________________________________________________________________
         //Birds
-        Bird kukushka1 = new Kukushka();
+        /*Bird kukushka1 = new Kukushka();
         Bird kukushka2 = new Kukushka();
         Bird parrot1 = new Parrot("привет");
         Bird parrot2 = new Parrot("привет");
@@ -35,11 +48,12 @@ public class Main {
         Bird vorobey3 = new Vorobey();
         Bird vorobey4 = new Vorobey();
 
-        //kukushka.sing();
-        //parrot.sing();
-        //vorobey.sing();
+        kukushka1.sing();
+        parrot1.sing();
+        vorobey1.sing();
 
-        MassSinging.massSinging(kukushka1, kukushka2, parrot1, parrot2, parrot3, vorobey1, vorobey2, vorobey3, vorobey4);
+        MassSinging.massSinging(kukushka1, kukushka2, parrot1, parrot2, parrot3, vorobey1, vorobey2,
+                vorobey3, vorobey4);*/
 
         //______________________________________________________________________________________________________
         //Measurable MyString
