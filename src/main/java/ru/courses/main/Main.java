@@ -6,10 +6,8 @@ import ru.courses.basics.ConditionalStatements;
 import ru.courses.basics.Loops;
 import ru.courses.math.SumAll;
 import ru.courses.math.geometry.*;
-import ru.courses.math.geometry.figures.Circle;
-import ru.courses.math.geometry.figures.Figure;
+import ru.courses.math.geometry.figures.*;
 import ru.courses.math.geometry.figures.Rectangle;
-import ru.courses.math.geometry.figures.Square;
 import ru.courses.objects.*;
 import ru.courses.basics.Array;
 import ru.courses.math.Exponentiation;
@@ -35,6 +33,8 @@ public class Main {
         System.out.println(square.getArea());
         System.out.println(rectangle.getArea());
         System.out.println(circle.getArea());
+        System.out.println(SumAreas.sumAreas(square, rectangle, circle));
+
 
         //______________________________________________________________________________________________________
         //Birds
