@@ -9,6 +9,10 @@ import ru.courses.math.geometry.*;
 import ru.courses.objects.*;
 import ru.courses.basics.Array;
 import ru.courses.math.Exponentiation;
+import ru.courses.objects.animals.Bird;
+import ru.courses.objects.animals.Kukushka;
+import ru.courses.objects.animals.Parrot;
+import ru.courses.objects.animals.Vorobey;
 
 import java.awt.*;
 import java.io.File;
@@ -23,9 +27,18 @@ import static ru.courses.math.geometry.PolyLineConstr.getLines;
 public class Main {
     public static void main(String[] args) {
         //______________________________________________________________________________________________________
+        //Birds
+        Bird kukushka = new Kukushka();
+        Bird parrot = new Parrot("привет");
+        Bird vorobey = new Vorobey();
+        kukushka.sing();
+        parrot.sing();
+        vorobey.sing();
+
+        //______________________________________________________________________________________________________
         //Measurable MyString
-        MyString myString = new MyString("молоко");
-        System.out.println(myString.getLength());
+        /*MyString myString = new MyString("молоко");
+        System.out.println(myString.getLength());*/
 
         //______________________________________________________________________________________________________
         //Measurable
