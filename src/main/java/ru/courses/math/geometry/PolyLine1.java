@@ -21,6 +21,7 @@ public class PolyLine1 extends Line implements Measurable {
     }
 
 
+    @Override
     public double getLength(){
         double sum = 0, len1, len2;
         for (int i = 0; i < points.length -1; i++) {

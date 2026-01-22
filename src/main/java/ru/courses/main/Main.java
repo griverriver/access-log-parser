@@ -23,8 +23,28 @@ import static ru.courses.math.geometry.PolyLineConstr.getLines;
 public class Main {
     public static void main(String[] args) {
         //______________________________________________________________________________________________________
+        //Measurable MyString
+        MyString myString = new MyString("молоко");
+        System.out.println(myString.getLength());
+
+        //______________________________________________________________________________________________________
+        //Measurable
+        /*Point1 pointPolyLine1 = new Point1(2, 6);
+        Point1 pointPolyLine2 = new Point1(7, 4);
+        Point1 pointPolyLine3 = new Point1(3, 9);
+        Point1 pointPolyLine4 = new Point1(5, 1);
+        Point1 pointPolyLine5 = new Point1(4, 7);
+        Point1 pointPolyLine6 = new Point1(4, 7);
+        Measurable polyLine1 = new PolyLine1(pointPolyLine1, pointPolyLine6, pointPolyLine3, pointPolyLine4, pointPolyLine5);
+        Measurable polyLine3 = new ClosedPolyLine(pointPolyLine1, pointPolyLine2, pointPolyLine3, pointPolyLine4, pointPolyLine5);
+        System.out.println(polyLine1);
+        System.out.println(polyLine3);
+        System.out.println(polyLine1.getLength());
+        System.out.println(polyLine3.getLength());*/
+
+        //______________________________________________________________________________________________________
         // Employee
-        Department department1 = new Department("Строительство");
+        /*Department department1 = new Department("Строительство");
         Department department2 = new Department("Продажи");
         Employee employee1 = new Employee("Ирина", department1);
         Employee employee2 = new Employee("Виктор", department1);
@@ -32,8 +52,7 @@ public class Main {
         //department2.setBoss(employee1);
         System.out.println(department1);
         System.out.println(employee1);
-        System.out.println(employee2);
-
+        System.out.println(employee2);*/
 
         //______________________________________________________________________________________________________
         //Square
