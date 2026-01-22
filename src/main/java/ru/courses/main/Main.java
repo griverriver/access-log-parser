@@ -22,13 +22,27 @@ import static ru.courses.math.geometry.PolyLineConstr.getLines;
 
 public class Main {
     public static void main(String[] args) {
+        //______________________________________________________________________________________________________
+        // Employee
+        Department department1 = new Department("Строительство");
+        Department department2 = new Department("Продажи");
+        Employee employee1 = new Employee("Ирина", department1);
+        Employee employee2 = new Employee("Виктор", department1);
+        department1.setBoss(employee1);
+        //department2.setBoss(employee1);
+        System.out.println(department1);
+        System.out.println(employee1);
+        System.out.println(employee2);
+
+
+        //______________________________________________________________________________________________________
         //Square
-        Square square1 = new Square(3,7,4);
+        /*Square square1 = new Square(3,7,4);
         //Square square2 = new Square(3,7,-4);
         System.out.println(square1);
         square1.setSideLength(9);
         square1.setLeftUpPoint(new Point1(6,22));
-        System.out.println(square1);
+        System.out.println(square1);*/
 
         //______________________________________________________________________________________________________
         //City
