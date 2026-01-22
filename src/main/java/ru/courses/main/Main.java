@@ -9,10 +9,7 @@ import ru.courses.math.geometry.*;
 import ru.courses.objects.*;
 import ru.courses.basics.Array;
 import ru.courses.math.Exponentiation;
-import ru.courses.objects.animals.Bird;
-import ru.courses.objects.animals.Kukushka;
-import ru.courses.objects.animals.Parrot;
-import ru.courses.objects.animals.Vorobey;
+import ru.courses.objects.animals.*;
 
 import java.awt.*;
 import java.io.File;
@@ -28,12 +25,21 @@ public class Main {
     public static void main(String[] args) {
         //______________________________________________________________________________________________________
         //Birds
-        Bird kukushka = new Kukushka();
-        Bird parrot = new Parrot("привет");
-        Bird vorobey = new Vorobey();
-        kukushka.sing();
-        parrot.sing();
-        vorobey.sing();
+        Bird kukushka1 = new Kukushka();
+        Bird kukushka2 = new Kukushka();
+        Bird parrot1 = new Parrot("привет");
+        Bird parrot2 = new Parrot("привет");
+        Bird parrot3 = new Parrot("привет");
+        Bird vorobey1 = new Vorobey();
+        Bird vorobey2 = new Vorobey();
+        Bird vorobey3 = new Vorobey();
+        Bird vorobey4 = new Vorobey();
+
+        //kukushka.sing();
+        //parrot.sing();
+        //vorobey.sing();
+
+        MassSinging.massSinging(kukushka1, kukushka2, parrot1, parrot2, parrot3, vorobey1, vorobey2, vorobey3, vorobey4);
 
         //______________________________________________________________________________________________________
         //Measurable MyString
