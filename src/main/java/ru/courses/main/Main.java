@@ -12,6 +12,10 @@ import ru.courses.objects.*;
 import ru.courses.basics.Array;
 import ru.courses.math.Exponentiation;
 import ru.courses.objects.animals.*;
+import ru.courses.objects.school.Gradable;
+import ru.courses.objects.school.GradeRule1;
+import ru.courses.objects.school.GradeRule2;
+import ru.courses.objects.school.Student1;
 
 import java.awt.*;
 import java.io.File;
@@ -26,13 +30,26 @@ import static ru.courses.math.geometry.PolyLineConstr.getLines;
 public class Main {
     public static void main(String[] args) {
         //______________________________________________________________________________________________________
+        //GradeRule
+        Gradable GradeRule1 = new GradeRule1();
+        Gradable GradeRule2 = new GradeRule2();
+        Student1 student1 = new Student1("Игорь", GradeRule1);
+        Student1 student2 = new Student1("Игорь", GradeRule2);
+        student1.addGrade(4);
+        student1.addGrade(9);
+        student2.addGrade(22);
+        student2.addGrade(-8);
+        System.out.println(student1);
+        System.out.println(student2);
+
+        //______________________________________________________________________________________________________
         //AnyPoint
-        AnyPoint point1 = new AnyPoint(3);
+        /*AnyPoint point1 = new AnyPoint(3);
         AnyPoint point2 = new AnyPoint(8,4).setColor("красный");
         AnyPoint point3 = new AnyPoint(8,4,22).setColor("желтый").setTime("12:22");
         System.out.println(point1);
         System.out.println(point2);
-        System.out.println(point3);
+        System.out.println(point3);*/
 
         //______________________________________________________________________________________________________
         //Figures

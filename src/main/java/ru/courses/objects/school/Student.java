@@ -1,4 +1,4 @@
-package ru.courses.objects;
+package ru.courses.objects.school;
 
 import java.util.*;
 
