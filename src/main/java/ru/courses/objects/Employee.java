@@ -3,34 +3,24 @@ package ru.courses.objects;
 import java.util.Objects;
 
 public class Employee {
-    private String employeeName;
-    private Department department;
+    String employeeName;
+    Department department;
 
-    public Employee(String employeeName, Department department) {
+    public Employee(String employeeName) {
         this.employeeName = employeeName;
+    }
+
+    public void setDepartment(Department department) {
         this.department = department;
     }
 
     @Override
     public String toString() {
-        if (Objects.equals(employeeName, department.getBoss().getEmployeeName())) {
-            return employeeName + " начальник отдела " + department.getDepartmentName();
+        if (Objects.equals(employeeName, department.boss.employeeName)) {
+            return employeeName + " начальник отдела " + department.departmentName;
         } else {
-            return employeeName + " работает в отделе " + department.getDepartmentName()
-                    + ", начальник которого " + department.getBoss().getEmployeeName();
+            return employeeName + " работает в отделе " + department.departmentName
+                    + ", начальник которого " + department.boss.employeeName;
         }
     }
-
-    public String getEmployeeName() {
-        return employeeName;
-    }
-
-    public Department getDepartment() {
-        return department;
-    }
 }
-
-
-//
-//Необходимо
-//гарантировать, что Начальник отдела всегда работает в том отделе, где он начальник.

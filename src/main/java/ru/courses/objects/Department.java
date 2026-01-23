@@ -3,17 +3,8 @@ package ru.courses.objects;
 import java.util.Objects;
 
 public class Department {
-    private String departmentName;
-    private Employee boss;
-
-    public Department(String departmentName, Employee boss) {
-        if (Objects.equals(departmentName, boss.getDepartment().getDepartmentName())) {
-            this.departmentName = departmentName;
-            this.boss = boss;
-        } else {
-            throw new IllegalArgumentException("Начальник отдела должен работает в том отделе, где он начальник");
-        }
-    }
+    String departmentName;
+    Employee boss;
 
     public Department(String departmentName) {
         this.departmentName = departmentName;
@@ -21,19 +12,11 @@ public class Department {
 
     @Override
     public String toString() {
-        return "Департамент: " + departmentName + ", начальник: " + boss.getEmployeeName();
-    }
-
-    public String getDepartmentName() {
-        return departmentName;
-    }
-
-    public Employee getBoss() {
-        return boss;
+        return "Департамент: " + departmentName + ", начальник: " + boss.employeeName;
     }
 
     public void setBoss(Employee boss) {
-        if (Objects.equals(departmentName, boss.getDepartment().getDepartmentName())) {
+        if (Objects.equals(departmentName, boss.department.departmentName)) {
             this.boss = boss;
         } else {
             throw new IllegalArgumentException("Начальник отдела должен работать в том отделе, где он начальник");
