@@ -26,15 +26,23 @@ import static ru.courses.math.geometry.PolyLineConstr.getLines;
 public class Main {
     public static void main(String[] args) {
         //______________________________________________________________________________________________________
+        //AnyPoint
+        AnyPoint point1 = new AnyPoint(3);
+        AnyPoint point2 = new AnyPoint(8,4).setColor("красный");
+        AnyPoint point3 = new AnyPoint(8,4,22).setColor("желтый").setTime("12:22");
+        System.out.println(point1);
+        System.out.println(point2);
+        System.out.println(point3);
+
+        //______________________________________________________________________________________________________
         //Figures
-        Square square = new Square(4,7,5);
+        /*Square square = new Square(4,7,5);
         Rectangle rectangle = new Rectangle(2,5,9,2);
         Circle circle = new Circle(9,1,6);
         System.out.println(square.getArea());
         System.out.println(rectangle.getArea());
         System.out.println(circle.getArea());
-        System.out.println(SumAreas.sumAreas(square, rectangle, circle));
-
+        System.out.println(SumAreas.sumAreas(square, rectangle, circle));*/
 
         //______________________________________________________________________________________________________
         //Birds
