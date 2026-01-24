@@ -35,6 +35,7 @@ public class Line implements ru.courses.Measurable, Cloneable{
         return "Линия от " + start + " до " + end;
     }
 
+    @Override
     public double getLength(){
         double sum = 0, len1, len2;
         for (int i = 0; i < points.length -1; i++) {
