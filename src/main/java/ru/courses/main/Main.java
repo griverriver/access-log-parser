@@ -4,6 +4,7 @@ import ru.courses.Measurable;
 import ru.courses.basics.ClassesMethods;
 import ru.courses.basics.ConditionalStatements;
 import ru.courses.basics.Loops;
+import ru.courses.courseproject.FileReader;
 import ru.courses.math.SumAll;
 import ru.courses.math.geometry.*;
 import ru.courses.math.geometry.figures.*;
@@ -18,7 +19,7 @@ import ru.courses.objects.school.GradeRule2;
 import ru.courses.objects.school.Student1;
 
 import java.awt.*;
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -31,7 +32,7 @@ public class Main {
     public static void main(String[] args) {
         //______________________________________________________________________________________________________
         //GradeRule
-        Gradable GradeRule1 = new GradeRule1();
+        /*Gradable GradeRule1 = new GradeRule1();
         Gradable GradeRule2 = new GradeRule2();
         Student1 student1 = new Student1("Игорь", GradeRule1);
         Student1 student2 = new Student1("Игорь", GradeRule2);
@@ -40,7 +41,7 @@ public class Main {
         student2.addGrade(22);
         student2.addGrade(-8);
         System.out.println(student1);
-        System.out.println(student2);
+        System.out.println(student2);*/
 
         //______________________________________________________________________________________________________
         //AnyPoint
@@ -419,8 +420,11 @@ public class Main {
         Loops.square(4);
         Loops.leftTriangle(4);
         Loops.rightTriangle(5);
-        Loops.guessGame();
-        Scanner scanner = new Scanner(System.in);
+        Loops.guessGame();*/
+
+        //______________________________________________________________________________________________________
+        //AccessLogParser
+        /*Scanner scanner = new Scanner(System.in);
         int count = 0;
         while (true) {
             System.out.println("Введите путь к файлу");
@@ -434,7 +438,10 @@ public class Main {
             }
             System.out.println("Путь указан верно");
             count++;
-            System.out.println("Это файл номер "+count);
+            System.out.println("Это файл номер " + count);
         }*/
+
+        //2d version
+        FileReader.FileReaderMethod();
     }
 }
