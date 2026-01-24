@@ -441,7 +441,7 @@ public class Main {
             System.out.println("Это файл номер " + count);
         }*/
 
-        //2d version
+        //2d and 3d version
         FileReader.FileReaderMethod();
     }
 }
