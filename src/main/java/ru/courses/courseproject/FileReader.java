@@ -43,16 +43,16 @@ public class FileReader {
 
         //_____________________________________________________________________________________________________
         //3d version
-        int count = 0;
+        /*int count = 0;
         int countGoogle = 0;
         int countYandex = 0;
-        /*String strIP = "";
+        String strIP = "";
         String strFeature = "";
         String strDateTime = "";
         String strRequest = "";
         String strStatus = "";
         String strDataSize = "";
-        String strReferer = "";*/
+        String strReferer = "";
         String strUserAgent = "";
         Scanner scanner = new Scanner(System.in);
         System.out.println("Введите путь к файлу");
@@ -66,7 +66,7 @@ public class FileReader {
                 if (line.length() > 1024) {
                     throw new InvalidLineLengthException();
                 }
-                /*Pattern patternIP = Pattern.compile("\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}");
+                Pattern patternIP = Pattern.compile("\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}\\.\\d{1,3}");
                 Matcher matcherIP = patternIP.matcher(line);
                 Pattern patternFeature = Pattern.compile("-\\s-");
                 Matcher matcherFeature = patternFeature.matcher(line);
@@ -81,11 +81,11 @@ public class FileReader {
                 Pattern patternDataSize = Pattern.compile("\".+?\"\\s\\d{3}\\s(\\d+)");
                 Matcher matcherDataSize = patternDataSize.matcher(line);
                 Pattern patternReferer  = Pattern.compile("\".+?\"\\s\\d{3}\\s\\d+\\s(\".+?\")");
-                Matcher matcherReferer = patternReferer.matcher(line);*/
+                Matcher matcherReferer = patternReferer.matcher(line);
                 Pattern patternUserAgent  = Pattern.compile("\"([^\"]+)\"$");
                 Matcher matcherUserAgent = patternUserAgent.matcher(line);
 
-                /*if (matcherIP.find()) {
+                if (matcherIP.find()) {
                     strIP = matcherIP.group();
                 }
                 if (matcherFeature.find()) {
@@ -107,7 +107,7 @@ public class FileReader {
                 }
                 if (matcherReferer.find()) {
                     strReferer = matcherReferer.group(1);
-                }*/
+                }
                 if (matcherUserAgent.find()) {
                     strUserAgent = matcherUserAgent.group(1);
                     Pattern patternFirstBrackets  = Pattern.compile("\\(.+?\\)");
@@ -140,15 +140,35 @@ public class FileReader {
             ex.printStackTrace();
         }
         System.out.println("Общее количество строк в файле: " + count);
-        /*System.out.println(strIP);
+        System.out.println(strIP);
         System.out.println(strFeature);
         System.out.println(strDateTime);
         System.out.println(strRequest);
         System.out.println(strStatus);
         System.out.println(strDataSize);
         System.out.println(strReferer);
-        System.out.println(strUserAgent);*/
+        System.out.println(strUserAgent);
         System.out.println("Доля запросов от YandexBot: " + ((double)countYandex/count));
         System.out.println("Доля запросов от Googlebot: " + ((double)countGoogle/count));
+    }*/
+
+        //_____________________________________________________________________________________________________
+        //4th version
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Введите путь к файлу");
+        String path = scanner.nextLine();
+
+        try {
+            java.io.FileReader fileReader = new java.io.FileReader(path);
+            BufferedReader reader = new BufferedReader(fileReader);
+            Statistics statistics = new Statistics();
+            while ((reader.readLine()) != null) {
+                LogEntry logEntry = new LogEntry(reader.readLine());
+                statistics.addEntry(logEntry);
+            }
+            System.out.println(statistics.getTrafficRate());
+        } catch (IOException ex) {
+            ex.printStackTrace();
+        }
     }
 }
