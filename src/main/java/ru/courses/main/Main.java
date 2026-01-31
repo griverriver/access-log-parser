@@ -31,6 +31,22 @@ import static ru.courses.math.geometry.PolyLineConstr.getLines;
 public class Main {
     public static void main(String[] args) {
         //______________________________________________________________________________________________________
+        //Collection
+        int amountElement = 6;
+        ArrayList<Integer> intList = new ArrayList<>(amountElement);
+        for (int i = 0; i < amountElement; i++) {
+            intList.add(i+1);
+        }
+        System.out.println(intList);
+        for (int i = 0; i < intList.size(); i++) {
+            int temp = intList.get(i);
+            intList.set(i, intList.get(i+1));
+            intList.set(i+1, temp);
+            i++;
+        }
+        System.out.println(intList);
+
+        //______________________________________________________________________________________________________
         //GradeRule
         /*Gradable GradeRule1 = new GradeRule1();
         Gradable GradeRule2 = new GradeRule2();
@@ -442,6 +458,6 @@ public class Main {
         }*/
 
         //2d and 3d version
-        FileReader.FileReaderMethod();
+        //FileReader.FileReaderMethod();
     }
 }
