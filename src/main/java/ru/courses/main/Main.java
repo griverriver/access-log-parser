@@ -28,10 +28,19 @@ import static ru.courses.math.geometry.PolyLineConstr.getLines;
 public class Main {
     public static void main(String[] args) {
         //______________________________________________________________________________________________________
-        //Collection - Замена ArrayList на массив
-        int[] intArray = new int[]{5,9,1,3,4,0,33,8,12,45};
-        System.out.println(Arrays.toString(Collections.bubbleSort(intArray)));
+        //Collection - Замена массива на ArrayList
+        int amountElement = 10;
+        ArrayList<Integer> intList = new ArrayList<>(amountElement);
+        for (int i = 0; i < amountElement; i++) {
+            intList.add(i+1);
+        }
+        System.out.println(intList);
+        System.out.println(Collections.reverse(intList));
 
+        //______________________________________________________________________________________________________
+        //Collection - Замена ArrayList на массив
+        /*int[] intArray = new int[]{5,9,1,3,4,0,33,8,12,45};
+        System.out.println(Arrays.toString(Collections.bubbleSort(intArray)));*/
 
         //______________________________________________________________________________________________________
         //Collection - попарные перестановки
