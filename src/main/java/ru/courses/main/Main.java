@@ -29,13 +29,13 @@ public class Main {
     public static void main(String[] args) {
         //______________________________________________________________________________________________________
         //Collection - Замена массива на ArrayList
-        int amountElement = 10;
+        /*int amountElement = 10;
         ArrayList<Integer> intList = new ArrayList<>(amountElement);
         for (int i = 0; i < amountElement; i++) {
             intList.add(i+1);
         }
         System.out.println(intList);
-        System.out.println(Collections.reverse(intList));
+        System.out.println(Collections.reverse(intList));*/
 
         //______________________________________________________________________________________________________
         //Collection - Замена ArrayList на массив
@@ -469,7 +469,7 @@ public class Main {
             System.out.println("Это файл номер " + count);
         }*/
 
-        //2d and 3d version
-        //FileReader.FileReaderMethod();
+        //2d, 3d and 4th version
+        FileReader.FileReaderMethod();
     }
 }

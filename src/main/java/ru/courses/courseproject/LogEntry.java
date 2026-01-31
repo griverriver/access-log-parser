@@ -64,7 +64,7 @@ public class LogEntry {
         Matcher matcherDateTime = patternDateTime.matcher(str);
         Pattern patternRequestMethod = Pattern.compile("\"(\\w+?)\\s");
         Matcher matcherRequestMethod = patternRequestMethod.matcher(str);
-        Pattern patternRequestPath = Pattern.compile("\"\\w+\\s(\\S+)\"");
+        Pattern patternRequestPath = Pattern.compile("\"(GET|POST|PUT|PATCH|DELETE|HEAD|CONNECT|OPTIONS|TRACE)\\s(/\\S+)\\sHTTP/");
         Matcher matcherRequestPath = patternRequestPath.matcher(str);
         Pattern patternStatus = Pattern.compile("\".+?\"\\s(\\d{3})");
         Matcher matcherStatus = patternStatus.matcher(str);
@@ -95,7 +95,7 @@ public class LogEntry {
         }else this.requestMethod = null;
 
         if (matcherRequestPath.find()) {
-            this.requestPath = matcherRequestPath.group(1);
+            this.requestPath = matcherRequestPath.group(2);
         }else this.requestPath = null;
 
         if (matcherStatus.find()) {
