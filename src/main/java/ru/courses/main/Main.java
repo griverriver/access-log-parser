@@ -469,7 +469,7 @@ public class Main {
             System.out.println("Это файл номер " + count);
         }*/
 
-        //2d, 3d and 4th version
+        //2d - 5th version
         FileReader.FileReaderMethod();
     }
 }
