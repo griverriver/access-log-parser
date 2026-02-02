@@ -28,10 +28,14 @@ import static ru.courses.math.geometry.PolyLineConstr.getLines;
 public class Main {
     public static void main(String[] args) {
         //______________________________________________________________________________________________________
-        //Stream API - Преобразование потока строк в строку
-        ArrayList<String> list = new ArrayList<>(Arrays.asList("Hello", "how", "are", "you"));
-        System.out.println(Streams.getStringFromStream(list.stream()));
+        //Stream API - Замена for на forEach
+        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(5,2,8,10,43));
+        Streams.printList(list);
 
+        //______________________________________________________________________________________________________
+        //Stream API - Преобразование потока строк в строку
+        /*ArrayList<String> list = new ArrayList<>(Arrays.asList("Hello", "how", "are", "you"));
+        System.out.println(Streams.getStringFromStream(list.stream()));*/
 
         //______________________________________________________________________________________________________
         //Collection - Замена массива на ArrayList
