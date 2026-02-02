@@ -1,16 +1,13 @@
 package ru.courses.main;
 
 import ru.courses.Measurable;
-import ru.courses.basics.ClassesMethods;
-import ru.courses.basics.ConditionalStatements;
-import ru.courses.basics.Loops;
+import ru.courses.basics.*;
 import ru.courses.courseproject.FileReader;
 import ru.courses.math.SumAll;
 import ru.courses.math.geometry.*;
 import ru.courses.math.geometry.figures.*;
 import ru.courses.math.geometry.figures.Rectangle;
 import ru.courses.objects.*;
-import ru.courses.basics.Array;
 import ru.courses.math.Exponentiation;
 import ru.courses.objects.animals.*;
 import ru.courses.objects.school.Gradable;
@@ -30,6 +27,37 @@ import static ru.courses.math.geometry.PolyLineConstr.getLines;
 
 public class Main {
     public static void main(String[] args) {
+        //______________________________________________________________________________________________________
+        //Collection - Замена массива на ArrayList
+        /*int amountElement = 10;
+        ArrayList<Integer> intList = new ArrayList<>(amountElement);
+        for (int i = 0; i < amountElement; i++) {
+            intList.add(i+1);
+        }
+        System.out.println(intList);
+        System.out.println(Collections.reverse(intList));*/
+
+        //______________________________________________________________________________________________________
+        //Collection - Замена ArrayList на массив
+        /*int[] intArray = new int[]{5,9,1,3,4,0,33,8,12,45};
+        System.out.println(Arrays.toString(Collections.bubbleSort(intArray)));*/
+
+        //______________________________________________________________________________________________________
+        //Collection - попарные перестановки
+        /*int amountElement = 6;
+        ArrayList<Integer> intList = new ArrayList<>(amountElement);
+        for (int i = 0; i < amountElement; i++) {
+            intList.add(i+1);
+        }
+        System.out.println(intList);
+        for (int i = 0; i < intList.size(); i++) {
+            int temp = intList.get(i);
+            intList.set(i, intList.get(i+1));
+            intList.set(i+1, temp);
+            i++;
+        }
+        System.out.println(intList);*/
+
         //______________________________________________________________________________________________________
         //GradeRule
         /*Gradable GradeRule1 = new GradeRule1();
@@ -441,7 +469,7 @@ public class Main {
             System.out.println("Это файл номер " + count);
         }*/
 
-        //2d and 3d version
+        //2d - 5th version
         FileReader.FileReaderMethod();
     }
 }

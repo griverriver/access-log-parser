@@ -166,7 +166,10 @@ public class FileReader {
                 LogEntry logEntry = new LogEntry(reader.readLine());
                 statistics.addEntry(logEntry);
             }
-            System.out.println(statistics.getTrafficRate());
+            System.out.println("getTrafficRate = " + statistics.getTrafficRate());
+            System.out.println("getAllAddresses = " + statistics.getAllAddresses());
+            System.out.println("getFrequencyOS = "+ statistics.getFrequencyOS());
+            System.out.println("getBrowserStatistic = " + statistics.getBrowserStatistic());
         } catch (IOException ex) {
             ex.printStackTrace();
         }
