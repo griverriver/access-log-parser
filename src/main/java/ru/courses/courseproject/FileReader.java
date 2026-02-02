@@ -166,10 +166,13 @@ public class FileReader {
                 LogEntry logEntry = new LogEntry(reader.readLine());
                 statistics.addEntry(logEntry);
             }
-            System.out.println("getTrafficRate = " + statistics.getTrafficRate());
-            System.out.println("getAllAddresses = " + statistics.getAllAddresses());
-            System.out.println("getFrequencyOS = "+ statistics.getFrequencyOS());
-            System.out.println("getBrowserStatistic = " + statistics.getBrowserStatistic());
+            //System.out.println("getTrafficRate = " + statistics.getTrafficRate());
+            //System.out.println("getAllAddresses = " + statistics.getAllAddresses());
+            //System.out.println("getFrequencyOS = "+ statistics.getFrequencyOS());
+            //System.out.println("getBrowserStatistic = " + statistics.getBrowserStatistic());
+            System.out.println("siteVisitsPerHour = " + statistics.siteVisitsPerHour());
+            System.out.println("wrongRequestPerHour = " + statistics.wrongRequestPerHour());
+            System.out.println("averageVisitsPerUser = " + statistics.averageVisitsPerUser());
         } catch (IOException ex) {
             ex.printStackTrace();
         }

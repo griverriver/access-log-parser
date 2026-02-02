@@ -29,8 +29,8 @@ public class Main {
     public static void main(String[] args) {
         //______________________________________________________________________________________________________
         //Stream API - Замена for на forEach
-        ArrayList<Integer> list = new ArrayList<>(Arrays.asList(5,2,8,10,43));
-        Streams.printList(list);
+        /*ArrayList<Integer> list = new ArrayList<>(Arrays.asList(5,2,8,10,43));
+        Streams.printList(list);*/
 
         //______________________________________________________________________________________________________
         //Stream API - Преобразование потока строк в строку
@@ -479,7 +479,7 @@ public class Main {
             System.out.println("Это файл номер " + count);
         }*/
 
-        //2d - 5th version
-        //FileReader.FileReaderMethod();
+        //2d - 6th version
+        FileReader.FileReaderMethod();
     }
 }

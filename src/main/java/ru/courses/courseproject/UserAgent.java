@@ -31,4 +31,8 @@ public class UserAgent {
             this.operatingSystem = OperatingSystem.WINDOWS;
         }else this.operatingSystem = OperatingSystem.UNKNOWN;
     }
+
+    public boolean isBot(){
+        return this.toString().contains("bot");
+    }
 }
