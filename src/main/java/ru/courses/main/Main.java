@@ -27,6 +27,16 @@ import static ru.courses.math.geometry.PolyLineConstr.getLines;
 
 public class Main {
     public static void main(String[] args) {
+
+        //______________________________________________________________________________________________________
+        //Reflection API - Cat
+        Cat cat = new Cat("Vasya", 10, new ArrayList<>(Arrays.asList("Anton", "Oleg", "Igor")));
+        Dog dog = new Dog("Roxy", 5, new ArrayList<>(Arrays.asList("Valya", "Jordyn", "Igor")));
+        System.out.println(cat + " " + dog);
+        DataReset.dataReset(dog);
+        DataReset.dataReset(cat);
+        System.out.println(cat + " " + dog);
+
         //______________________________________________________________________________________________________
         //Stream API - Замена for на forEach
         /*ArrayList<Integer> list = new ArrayList<>(Arrays.asList(5,2,8,10,43));
@@ -480,6 +490,6 @@ public class Main {
         }*/
 
         //2d - 6th version
-        FileReader.FileReaderMethod();
+        //FileReader.FileReaderMethod();
     }
 }
