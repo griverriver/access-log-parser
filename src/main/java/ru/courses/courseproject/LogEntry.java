@@ -15,6 +15,7 @@ public class LogEntry {
     private final int responseCode;
     private final int dataSize;
     private final String referer;
+    private final String domain;
     private final UserAgent userAgent;
 
     public String getIp() {
@@ -49,6 +50,8 @@ public class LogEntry {
         return referer;
     }
 
+    public String getDomain() { return domain; }
+
     public UserAgent getUserAgent() {
         return userAgent;
     }
@@ -72,47 +75,53 @@ public class LogEntry {
         Matcher matcherDataSize = patternDataSize.matcher(str);
         Pattern patternReferer = Pattern.compile("\".+?\"\\s\\d{3}\\s\\d+\\s(\".+?\")");
         Matcher matcherReferer = patternReferer.matcher(str);
+        Pattern patternDomain = Pattern.compile(("https?://([a-zA-Z0-9.-]+)//"));
+        Matcher matcherDomain = patternDomain.matcher(str);
         Pattern patternUserAgent = Pattern.compile("\"([^\"]+)\"$");
         Matcher matcherUserAgent = patternUserAgent.matcher(str);
 
         if (matcherIP.find()) {
             this.ip = matcherIP.group();
-        }else this.ip = null;
+        } else this.ip = null;
 
         if (matcherFeature.find()) {
             this.feature = matcherFeature.group();
         } else if (matcherFeature2.find()) {
             this.feature = matcherFeature2.group();
-        }else this.feature = null;
+        } else this.feature = null;
 
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MMM/yyyy:HH:mm:ss", Locale.ENGLISH);
         if (matcherDateTime.find()) {
             this.dateTime = LocalDateTime.parse(matcherDateTime.group(1), formatter);
-        }else this.dateTime = null;
+        } else this.dateTime = null;
 
         if (matcherRequestMethod.find()) {
             this.requestMethod = RequestMethod.valueOf(matcherRequestMethod.group(1));
-        }else this.requestMethod = null;
+        } else this.requestMethod = null;
 
         if (matcherRequestPath.find()) {
             this.requestPath = matcherRequestPath.group(2);
-        }else this.requestPath = null;
+        } else this.requestPath = null;
 
         if (matcherStatus.find()) {
             this.responseCode = Integer.parseInt(matcherStatus.group(1));
-        }else this.responseCode = 0;
+        } else this.responseCode = 0;
 
         if (matcherDataSize.find()) {
             this.dataSize = Integer.parseInt(matcherDataSize.group(1));
-        }else this.dataSize = 0;
+        } else this.dataSize = 0;
 
         if (matcherReferer.find()) {
             this.referer = matcherReferer.group(1);
-        }else this.referer = null;
+        } else this.referer = null;
+
+        if (matcherDomain.find()) {
+            this.domain = matcherDomain.group(1);
+        } else this.domain = null;
 
         if (matcherUserAgent.find()) {
             this.userAgent = new UserAgent(matcherUserAgent.group(1));
-        }else this.userAgent = null;
+        } else this.userAgent = null;
     }
 
     @Override
