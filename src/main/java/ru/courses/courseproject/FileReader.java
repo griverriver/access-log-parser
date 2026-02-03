@@ -162,14 +162,22 @@ public class FileReader {
             java.io.FileReader fileReader = new java.io.FileReader(path);
             BufferedReader reader = new BufferedReader(fileReader);
             Statistics statistics = new Statistics();
-            while ((reader.readLine()) != null) {
-                LogEntry logEntry = new LogEntry(reader.readLine());
+            String line;
+            while ((line = reader.readLine()) != null) {
+                LogEntry logEntry = new LogEntry(line);
                 statistics.addEntry(logEntry);
             }
-            System.out.println("getTrafficRate = " + statistics.getTrafficRate());
-            System.out.println("getAllAddresses = " + statistics.getAllAddresses());
-            System.out.println("getFrequencyOS = "+ statistics.getFrequencyOS());
-            System.out.println("getBrowserStatistic = " + statistics.getBrowserStatistic());
+            //System.out.println("getTrafficRate = " + statistics.getTrafficRate());
+            //System.out.println("getAllAddresses = " + statistics.getAllAddresses());
+            //System.out.println("getFrequencyOS = "+ statistics.getFrequencyOS());
+            //System.out.println("getBrowserStatistic = " + statistics.getBrowserStatistic());
+            //System.out.println("siteVisitsPerHour = " + statistics.siteVisitsPerHour());
+            //System.out.println("wrongRequestPerHour = " + statistics.wrongRequestPerHour());
+            //System.out.println("averageVisitsPerUser = " + statistics.averageVisitsPerUser());
+            //System.out.println("siteVisitsPerSec = " + statistics.siteVisitsPerSec());
+            //String domain = "www.nova-news.ru";
+            //System.out.println("connectedPages for "+domain+": "+statistics.connectedPages(domain));
+            System.out.println("maxVisitsPerUser = " + statistics.maxVisitsPerUser());
         } catch (IOException ex) {
             ex.printStackTrace();
         }
